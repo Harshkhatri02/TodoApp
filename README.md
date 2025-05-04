@@ -58,29 +58,7 @@ npm run dev
 
 5. Open your browser and navigate to `http://localhost:3000`
 
-## Deployment
-
-1. Build the frontend:
-```bash
-npm run build
-```
-
-2. Start the production servers:
-```bash
-# Start the backend server
-npm run serve:api
-
-# Start the frontend server
-npm start
-```
-
-## Environment Variables
-
-Create a `.env` file in the server directory with the following variables:
-```
-DATABASE_URL="postgresql://username:password@localhost:5432/todo_db"
-PORT=3001
-```
+6. The App is ready to use with the database !
 
 ## Tech Stack
 
