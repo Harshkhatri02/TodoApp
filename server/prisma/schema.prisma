@@ -1,0 +1,27 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Todo {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  completed   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  dueDate     DateTime?
+  
+  // Recurrence fields
+  isRecurring Boolean   @default(false)
+  frequency   String?   // DAILY, WEEKLY, MONTHLY, YEARLY
+  interval    Int?      // Every X days/weeks/months/years
+  weekDays    Int[]     // Array of weekday numbers (1-7, where 1 is Monday)
+  monthDay    Int?      // Day of month for monthly recurrence
+  startDate   DateTime?
+  endDate     DateTime?
+}
