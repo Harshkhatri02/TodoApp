@@ -30,6 +30,7 @@ cd todo-app
 2. Install dependencies:
 ```bash
 # Install frontend dependencies
+#This will properly install the current packages used in the project 
 npm install
 
 # Install backend dependencies
